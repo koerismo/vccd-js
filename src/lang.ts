@@ -2,7 +2,8 @@ import { ViewBuffer } from 'stupid-buffer';
 import { bstr } from 'crc-32';
 import vdf from 'fast-vdf';
 
-function encode_str16(str: string): Uint16Array {
+/** Encodes a string to a Uint16Array and appends a trailing null character. */
+export function encode_str16(str: string): Uint16Array {
 	const arr = new Uint16Array(str.length + 1);
 	for (let i=0; i<str.length; i++) {
 		arr[i] = str.charCodeAt(i);
@@ -10,7 +11,8 @@ function encode_str16(str: string): Uint16Array {
 	return arr;
 }
 
-function decode_str16(arr: Uint16Array): string {
+/** Decodes a Uint16Array to a string. If a null byte is present, the string will be trimmed. */
+export function decode_str16(arr: Uint16Array): string {
 	let z_index = arr.indexOf(0);
 	if (z_index === -1) z_index = arr.length;
 	const trimmed = new Uint16Array(arr.buffer, arr.byteOffset, z_index);
@@ -21,9 +23,7 @@ const HEADER_SIZE = 24;
 const DIRECTORY_ENTRY_SIZE = 4+4+2+2;
 const BLOCK_SIZE = 8192;
 
-/**
- * Defines a Source Engine captions language.
- */
+/** Defines a Source Engine captions language. */
 export class Language {
 	public name: string | undefined;
 	public readonly tokens: Map<string|number, string> = new Map();
