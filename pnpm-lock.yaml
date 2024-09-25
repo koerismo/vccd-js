@@ -1,0 +1,56 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      crc-32:
+        specifier: ^1.2.2
+        version: 1.2.2
+    devDependencies:
+      '@types/node':
+        specifier: ^22.7.0
+        version: 22.7.0
+      fast-vdf:
+        specifier: ^2.0.2
+        version: 2.0.2
+      stupid-buffer:
+        specifier: ^1.0.0
+        version: 1.0.0
+
+packages:
+
+  '@types/node@22.7.0':
+    resolution: {integrity: sha512-MOdOibwBs6KW1vfqz2uKMlxq5xAfAZ98SZjO8e3XnAbFnTJtAspqhWk7hrdSAs9/Y14ZWMiy7/MxMUzAOadYEw==}
+
+  crc-32@1.2.2:
+    resolution: {integrity: sha512-ROmzCKrTnOwybPcJApAA6WBWij23HVfGVNKqqrZpuyZOHqK2CwHSvpGuyt/UNNvaIjEd8X5IFGp4Mh+Ie1IHJQ==}
+    engines: {node: '>=0.8'}
+    hasBin: true
+
+  fast-vdf@2.0.2:
+    resolution: {integrity: sha512-64FRsYKzAr0AYIjz/ii3SEXz6TyAEbl/7yFrIuI+mAtUnrkzrLRPmH+6AGJRhwcFLFowTvT0zp/ywW8LsvBxOw==}
+
+  stupid-buffer@1.0.0:
+    resolution: {integrity: sha512-aPufQPaRFtAechbjhcBaab5D5IMnKIsTuNI0Iekg5PTjTsaTt40eH5p0jGod2lwhlfnFG+fVZU8EmOtFp3joHw==}
+
+  undici-types@6.19.8:
+    resolution: {integrity: sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw==}
+
+snapshots:
+
+  '@types/node@22.7.0':
+    dependencies:
+      undici-types: 6.19.8
+
+  crc-32@1.2.2: {}
+
+  fast-vdf@2.0.2: {}
+
+  stupid-buffer@1.0.0: {}
+
+  undici-types@6.19.8: {}

@@ -1,0 +1,36 @@
+{
+	"name": "vccd",
+	"version": "1.0.0",
+	"description": "A library for compiling and decompiling Source Engine caption files.",
+	"type": "module",
+	"repository": "github:koerismo/vccd-js",
+
+	"files": [ "dist/" ],
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+
+	"scripts": {
+		"build": "tsc",
+		"test": "bun test",
+		"prepare": "pnpm run build"
+	},
+
+	"keywords": [
+		"source",
+		"source-engine",
+		"captions",
+		"subtitles",
+		"caption-compiler",
+		"caption-decompiler"
+	],
+	"author": "Koerismo",
+	"license": "LGPL-3.0-or-later",
+	"devDependencies": {
+		"@types/node": "^22.7.0"
+	},
+	"dependencies": {
+		"crc-32": "^1.2.2",
+		"fast-vdf": "^2.0.2",
+		"stupid-buffer": "^1.0.0"
+	}
+}
